@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deutsch mit Passie | Twój Osobisty Nauczyciel Niemieckiego</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0F172A',     /* Deep Slate */
+                            navy: '#1E293B',     /* Slate Navy */
+                            gold: '#D97706',     /* Warm Amber/Gold */
+                            goldHover: '#B45309',
+                            red: '#DC2626',      /* Accent Red */
+                            light: '#F8FAFC',
+                            card: '#FFFFFF',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #DC2626 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .de-border-gradient {
+            border-image: linear-gradient(to right, #111827, #DC2626, #F59E0B) 1;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-amber-100 selection:text-amber-900">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md text-white border-b border-slate-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 via-red-500 to-slate-900 flex items-center justify-center font-heading font-bold text-lg text-white shadow-md group-hover:scale-105 transition-transform">
+                    DE
+                </div>
+                <div>
+                    <span class="font-heading font-bold text-xl tracking-tight block">Deutsch<span class="text-amber-500">Master</span></span>
+                    <span class="text-xs text-slate-400 block -mt-1 font-medium">Anna Kowalska • Nauczyciel i Lektor</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-amber-400 transition-colors">O mnie</a>
+                <a href="#oferta" class="hover:text-amber-400 transition-colors">Oferta</a>
+                <a href="#metoda" class="hover:text-amber-400 transition-colors">Metoda</a>
+                <a href="#quiz" class="hover:text-amber-400 transition-colors">Test Poziomujący</a>
+                <a href="#cennik" class="hover:text-amber-400 transition-colors">Kalkulator</a>
+                <a href="#opinie" class="hover:text-amber-400 transition-colors">Opinie</a>
+                <a href="#faq" class="hover:text-amber-400 transition-colors">FAQ</a>
+            </nav>
+
+            <!-- CTA Header Button -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#kontakt" class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2.5 rounded-xl font-medium shadow-md shadow-amber-600/20 hover:shadow-lg transition-all flex items-center gap-2">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    <span>Darmowa Lekcja</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-300 hover:text-white focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-slate-300 hover:text-amber-400 font-medium">O mnie</a>
+            <a href="#oferta" class="block py-2 text-slate-300 hover:text-amber-400 font-medium">Oferta</a>
+            <a href="#metoda" class="block py-2 text-slate-300 hover:text-amber-400 font-medium">Metoda</a>
+            <a href="#quiz" class="block py-2 text-slate-300 hover:text-amber-400 font-medium">Test Poziomujący</a>
+            <a href="#cennik" class="block py-2 text-slate-300 hover:text-amber-400 font-medium">Kalkulator opłat</a>
+            <a href="#opinie" class="block py-2 text-slate-300 hover:text-amber-400 font-medium">Opinie</a>
+            <a href="#faq" class="block py-2 text-slate-300 hover:text-amber-400 font-medium">FAQ</a>
+            <a href="#kontakt" class="block w-full text-center bg-amber-600 text-white font-semibold py-3 rounded-xl shadow-md mt-4">
+                Zapisz się na Lekcję Próbną
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-slate-900 text-white pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
+        <!-- Subtle Background Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 right-10 w-80 h-80 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-amber-400 text-xs sm:text-sm font-semibold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Willkommen! Otwórz drzwi do Niemiec
+                    </div>
+                    
+                    <h1 class="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-tight">
+                        Odkryj język niemiecki <br class="hidden sm:inline" />
+                        <span class="gradient-text">z pasją i bez stresu!</span>
+                    </h1>
+                    
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Przełam barierę językową, przygotuj się do awansu w pracy lub zdaj egzamin Goethe/TELC z wysokim wynikiem. Indywidualny plan nauki dostosowany do Twojego tempa!
+                    </p>
+
+                    <!-- Key Benefits Icons Row -->
+                    <div class="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-3 text-slate-300 text-sm font-medium text-left">
+                        <div class="flex items-center gap-2.5 bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/50">
+                            <i data-lucide="user-check" class="w-5 h-5 text-amber-400 shrink-0"></i>
+                            <span>Indywidualne podejście</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/50">
+                            <i data-lucide="calendar" class="w-5 h-5 text-amber-400 shrink-0"></i>
+                            <span>Elastyczny grafik</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/50">
+                            <i data-lucide="message-square-code" class="w-5 h-5 text-amber-400 shrink-0"></i>
+                            <span>Praktyczna gramatyka</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#kontakt" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-amber-500/25 transition-all transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
+                            <span>Bezpłatna Lekcja Próbna</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#oferta" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold px-8 py-4 rounded-xl transition-all text-center">
+                            Zobacz Ofertę Kursów
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Hero Teacher Card / Avatar -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <!-- Decorative Frame Behind Card -->
+                        <div class="absolute -inset-1.5 rounded-3xl bg-gradient-to-r from-amber-500 via-red-500 to-slate-700 blur opacity-75"></div>
+                        
+                        <div class="relative bg-slate-800 rounded-3xl p-6 shadow-2xl border border-slate-700">
+                            <div class="relative rounded-2xl overflow-hidden aspect-square mb-6 bg-slate-700">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" 
+                                     alt="mgr Anna Kowalska - Nauczyciel Niemieckiego" 
+                                     class="w-full h-full object-cover object-top"
+                                     onerror="this.src='https://placehold.co/600x600/1e293b/d97706?text=Anna+Kowalska+Photo'">
+                                
+                                <div class="absolute bottom-3 left-3 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-700 text-xs text-white font-medium flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                                    Rekrutacja na nowy semestr otwarta
+                                </div>
+                            </div>
+
+                            <div class="space-y-3 text-center sm:text-left">
+                                <div class="flex items-center justify-between flex-wrap gap-2">
+                                    <h2 class="font-heading font-bold text-xl text-white">mgr Anna Kowalska</h2>
+                                    <span class="text-xs bg-amber-500/20 text-amber-300 font-semibold px-2.5 py-1 rounded-md border border-amber-500/30">Germanistyka UAM</span>
+                                </div>
+                                <p class="text-sm text-slate-300">
+                                    "Deutsch lernen macht Spaß! Pomagam dorosłym i młodzieży mówić bez skrępowania."
+                                </p>
+
+                                <div class="pt-3 border-t border-slate-700/80 flex items-center justify-between text-xs text-slate-400">
+                                    <div class="flex items-center gap-1.5">
+                                        <i data-lucide="award" class="w-4 h-4 text-amber-400"></i>
+                                        <span>Telc & Goethe Trainer</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <div class="flex text-amber-400">
+                                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                                        </div>
+                                        <span class="text-white font-semibold ml-1">5.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-amber-600 font-semibold text-sm tracking-wider uppercase">
+                        <i data-lucide="user" class="w-4 h-4"></i>
+                        Poznajmy się
+                    </div>
+                    <h2 class="font-heading font-bold text-3xl sm:text-4xl text-slate-900 leading-tight">
+                        Cześć! Nazywam się Anna i pomogę Ci pokochać język niemiecki.
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Jestem certyfikowanym lektorem i absolwentką Filologii Germańskiej z ponad 10-letnim doświadczeniem w nauczaniu. Mieszkając przez 4 lata w Monachium oraz pracując w międzynarodowych korporacjach, poznałam język od podszewki – nie tylko książkowy, ale przede wszystkim **żywy język codzienny i biznesowy**.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Moja filozofia nauczania opiera się na przyjaznej atmosferze. Rezygnujemy z nudnej „pamięciówki” na rzecz **rozmowy od pierwszej lekcji**, automatyzowania schematów oraz praktycznego użycia w realnych sytuacjach życiowych.
+                    </p>
+
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="p-1 bg-amber-100 rounded-lg text-amber-700 mt-1">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-slate-700 font-medium">Autorskie materiały dydaktyczne w cenie zajęć (PDF, audio, fiszki Quizlet).</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="p-1 bg-amber-100 rounded-lg text-amber-700 mt-1">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-slate-700 font-medium">Specjalizacja w przełamywaniu stresu przed mówieniem.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="p-1 bg-amber-100 rounded-lg text-amber-700 mt-1">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-slate-700 font-medium">Przygotowanie do rozmów kwalifikacyjnych w niemieckich firmach.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Counter Cards -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4 sm:gap-6">
+                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto bg-amber-100 rounded-xl flex items-center justify-center text-amber-600 mb-4">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <div class="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900">500+</div>
+                        <div class="text-slate-500 font-medium text-sm mt-1">Zadowolonych uczniów</div>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto bg-red-100 rounded-xl flex items-center justify-center text-red-600 mb-4">
+                            <i data-lucide="clock" class="w-6 h-6"></i>
+                        </div>
+                        <div class="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900">10+ lat</div>
+                        <div class="text-slate-500 font-medium text-sm mt-1">Doświadczenia w nauczaniu</div>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 mb-4">
+                            <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                        </div>
+                        <div class="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900">98%</div>
+                        <div class="text-slate-500 font-medium text-sm mt-1">Zdanych egzaminów Goethe/TELC</div>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto bg-sky-100 rounded-xl flex items-center justify-center text-sky-600 mb-4">
+                            <i data-lucide="laptop" class="w-6 h-6"></i>
+                        </div>
+                        <div class="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900">100%</div>
+                        <div class="text-slate-500 font-medium text-sm mt-1">Wygodne lekcje Online</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Oferta / Course Selection Section -->
+    <section id="oferta" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-400 font-semibold text-sm tracking-wider uppercase">Dopasowane Kursy</span>
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-2 mb-4">Wybierz ścieżkę dla siebie</h2>
+                <p class="text-slate-400 text-base">
+                    Niezależnie od tego, czy zaczynasz od zera ("Guten Tag!"), czy potrzebujesz zaawansowanej słownictwa biznesowego – znajdziemy rozwiązanie idealne.
+                </p>
+            </div>
+
+            <!-- Course Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 flex flex-col justify-between hover:border-amber-500/50 transition-all hover:shadow-xl">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-amber-500/10 text-amber-400 font-semibold text-xs px-3 py-1 rounded-full border border-amber-500/20">A1 - A2</span>
+                            <span class="text-slate-400 text-sm">60 minut</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl mb-3">Niemiecki od Podstaw</h3>
+                        <p class="text-slate-300 text-sm mb-6">
+                            Dla osób zaczynających lub chcących uporządkować podstawy. Szybko zaczniesz budować pełne zdania i zadawać pytania.
+                        </p>
+                        <ul class="space-y-2.5 text-xs text-slate-300 mb-8">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i> Podstawy wymowy i akcentu</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i> Dialogi sytuacyjne (sklep, restauracja)</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i> Przystępne wyjaśnienie gramatyki</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="mb-4">
+                            <span class="text-2xl font-bold text-white">od 120 zł</span>
+                            <span class="text-slate-400 text-xs"> / lekcja</span>
+                        </div>
+                        <a href="#kontakt" onclick="selectCourse('Niemiecki od Podstaw (A1-A2)')" class="block w-full text-center bg-slate-700 hover:bg-amber-600 hover:text-white text-slate-200 font-semibold py-3 rounded-xl transition-colors">
+                            Wybieram ten kurs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 (Popular Choice) -->
+                <div class="bg-slate-800 rounded-2xl p-6 border-2 border-amber-500 relative flex flex-col justify-between shadow-2xl shadow-amber-500/10">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-500 text-slate-950 font-bold text-xs px-4 py-1 rounded-full uppercase tracking-wider">
+                        Najczęściej Wybierany
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-4 mt-2">
+                            <span class="bg-amber-500/10 text-amber-400 font-semibold text-xs px-3 py-1 rounded-full border border-amber-500/20">B1 - C1</span>
+                            <span class="text-slate-400 text-sm">60 minut</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl mb-3">Konwersacje & Swoboda</h3>
+                        <p class="text-slate-300 text-sm mb-6">
+                            Przełam opór przed mówieniem. Rozmawiamy na aktualne tematy, analizujemy artykuły i podcasty w naturalny sposób.
+                        </p>
+                        <ul class="space-y-2.5 text-xs text-slate-300 mb-8">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i> Rozszerzanie zasobu słownictwa</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i> Poprawa płynności i reakcji</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i> Korekta błędów w czasie rzeczywistym</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="mb-4">
+                            <span class="text-2xl font-bold text-white">od 130 zł</span>
+                            <span class="text-slate-400 text-xs"> / lekcja</span>
+                        </div>
+                        <a href="#kontakt" onclick="selectCourse('Konwersacje & Swoboda (B1-C1)')" class="block w-full text-center bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3 rounded-xl transition-colors shadow-lg">
+                            Wybieram ten kurs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 flex flex-col justify-between hover:border-amber-500/50 transition-all hover:shadow-xl">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-red-500/10 text-red-400 font-semibold text-xs px-3 py-1 rounded-full border border-red-500/20">Business German</span>
+                            <span class="text-slate-400 text-sm">60 minut</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl mb-3">Niemiecki w Biznesie</h3>
+                        <p class="text-slate-300 text-sm mb-6">
+                            Niemiecki dla specjalistów, IT, finansów i kadry menedżerskiej. Przygotowanie do spotkań, mailingu i negocjacji.
+                        </p>
+                        <ul class="space-y-2.5 text-xs text-slate-300 mb-8">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i> Formalna korespondencja e-mail</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i> Symulacje rozmów rekrutacyjnych</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i> Słownictwo specjalistyczne</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="mb-4">
+                            <span class="text-2xl font-bold text-white">od 150 zł</span>
+                            <span class="text-slate-400 text-xs"> / lekcja</span>
+                        </div>
+                        <a href="#kontakt" onclick="selectCourse('Niemiecki w Biznesie')" class="block w-full text-center bg-slate-700 hover:bg-amber-600 hover:text-white text-slate-200 font-semibold py-3 rounded-xl transition-colors">
+                            Wybieram ten kurs
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Additional Exam prep note -->
+            <div class="mt-12 bg-slate-800/60 rounded-2xl p-6 border border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="p-3 bg-red-500/10 text-red-400 rounded-xl">
+                        <i data-lucide="file-check" class="w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-heading font-bold text-lg">Przygotowanie do Egzaminów (Goethe, TELC, Matura)</h4>
+                        <p class="text-slate-400 text-sm">Intensywny trening nakierowany na technikę rozwiązywania arkuszy i część ustną.</p>
+                    </div>
+                </div>
+                <a href="#kontakt" onclick="selectCourse('Przygotowanie do Egzaminu')" class="shrink-0 bg-slate-700 hover:bg-slate-600 text-white font-medium px-5 py-2.5 rounded-xl transition-colors text-sm">
+                    Zapytaj o szczegóły
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Teaching Methodology Section -->
+    <section id="metoda" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-600 font-semibold text-sm tracking-wider uppercase">Metodologia</span>
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl text-slate-900 mt-2">Jak wyglądają nasze zajęcia?</h2>
+                <p class="text-slate-600 mt-3">Nowoczesne podejście, które eliminuje uczucie znużenia i przynosi szybkie efekty.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Method Card 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-5">
+                        <i data-lucide="messages-square" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-slate-900 text-lg mb-2">Metoda Komunikatywna</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Mówimy w języku niemieckim od pierwszych minut. Błędy traktujemy jako naturalny krok do płynności, nie powód do wstydu.
+                    </p>
+                </div>
+
+                <!-- Method Card 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-5">
+                        <i data-lucide="layers" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-slate-900 text-lg mb-2">Materiały Szyte na Miarę</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Korzystamy z autentycznych wycinków prasowych, krótkich filmów, podcastów oraz sytuacji dopasowanych do Twoich zainteresowań.
+                    </p>
+                </div>
+
+                <!-- Method Card 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-5">
+                        <i data-lucide="video" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-slate-900 text-lg mb-2">Elastyczność Online</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Lekcje odbywają się wygodnie przez Zoom lub MS Teams. Oszczędzasz czas na dojazdy i uczysz się z dowolnego miejsca.
+                    </p>
+                </div>
+
+                <!-- Method Card 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-5">
+                        <i data-lucide="smartphone" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-slate-900 text-lg mb-2">Nowoczesne Narzędzia</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Aplikacje Quizlet z dedykowanymi zestawami słówek, tablica Google Jamboard/Miro oraz interaktywne notatki po każdej lekcji.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Placement Quiz Section -->
+    <section id="quiz" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-10">
+                <span class="text-amber-400 font-semibold text-xs uppercase tracking-wider bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+                    Szybka Diagnoza
+                </span>
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3">Sprawdź swój poziom niemieckiego</h2>
+                <p class="text-slate-400 text-sm mt-2">Odpowiedz na 3 krótkie pytania, a podpowiemy Ci, od jakiego stopnia warto zacząć!</p>
+            </div>
+
+            <!-- Quiz Container -->
+            <div class="bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-700 shadow-xl" id="quiz-box">
+                <!-- Question 1 -->
+                <div class="quiz-step" id="step-1">
+                    <div class="flex justify-between text-xs text-amber-400 font-semibold mb-3">
+                        <span>Pytanie 1 z 3</span>
+                        <span>33%</span>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg text-white mb-4">
+                        Jak powiesz po niemiecku: "Mam na imię Anna i mieszkam w Warszawie"?
+                    </h3>
+                    <div class="space-y-3">
+                        <button onclick="answerQuiz(1, 1)" class="w-full text-left bg-slate-700/60 hover:bg-amber-600/20 hover:border-amber-500 border border-slate-600 p-4 rounded-xl transition-all text-sm flex items-center justify-between">
+                            <span>A) Ich heiße Anna und ich wohne in Warschau.</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                        </button>
+                        <button onclick="answerQuiz(1, 0)" class="w-full text-left bg-slate-700/60 hover:bg-amber-600/20 hover:border-amber-500 border border-slate-600 p-4 rounded-xl transition-all text-sm flex items-center justify-between">
+                            <span>B) Mein Name ist Anna und ich gehe nach Warschau.</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                        </button>
+                        <button onclick="answerQuiz(1, 0)" class="w-full text-left bg-slate-700/60 hover:bg-amber-600/20 hover:border-amber-500 border border-slate-600 p-4 rounded-xl transition-all text-sm flex items-center justify-between">
+                            <span>C) Ich bin Anna und wohne an Warschau.</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="quiz-step hidden" id="step-2">
+                    <div class="flex justify-between text-xs text-amber-400 font-semibold mb-3">
+                        <span>Pytanie 2 z 3</span>
+                        <span>66%</span>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg text-white mb-4">
+                        Wybierz poprawne dokończenie zdania: "Ich kann heute nicht kommen, weil..."
+                    </h3>
+                    <div class="space-y-3">
+                        <button onclick="answerQuiz(2, 0)" class="w-full text-left bg-slate-700/60 hover:bg-amber-600/20 hover:border-amber-500 border border-slate-600 p-4 rounded-xl transition-all text-sm flex items-center justify-between">
+                            <span>A) ...ich bin krank.</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                        </button>
+                        <button onclick="answerQuiz(2, 1)" class="w-full text-left bg-slate-700/60 hover:bg-amber-600/20 hover:border-amber-500 border border-slate-600 p-4 rounded-xl transition-all text-sm flex items-center justify-between">
+                            <span>B) ...ich krank bin.</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                        </button>
+                        <button onclick="answerQuiz(2, 0)" class="w-full text-left bg-slate-700/60 hover:bg-amber-600/20 hover:border-amber-500 border border-slate-600 p-4 rounded-xl transition-all text-sm flex items-center justify-between">
+                            <span>C) ...krank ich bin.</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="quiz-step hidden" id="step-3">
+                    <div class="flex justify-between text-xs text-amber-400 font-semibold mb-3">
+                        <span>Pytanie 3 z 3</span>
+                        <span>100%</span>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg text-white mb-4">
+                        Co oznacza zwrot: "Ich drücke dir die Daumen!"?
+                    </h3>
+                    <div class="space-y-3">
+                        <button onclick="answerQuiz(3, 0)" class="w-full text-left bg-slate-700/60 hover:bg-amber-600/20 hover:border-amber-500 border border-slate-600 p-4 rounded-xl transition-all text-sm flex items-center justify-between">
+                            <span>A) Jestem na ciebie zły.</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                        </button>
+                        <button onclick="answerQuiz(3, 1)" class="w-full text-left bg-slate-700/60 hover:bg-amber-600/20 hover:border-amber-500 border border-slate-600 p-4 rounded-xl transition-all text-sm flex items-center justify-between">
+                            <span>B) Trzymam za ciebie kciuki!</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                        </button>
+                        <button onclick="answerQuiz(3, 0)" class="w-full text-left bg-slate-700/60 hover:bg-amber-600/20 hover:border-amber-500 border border-slate-600 p-4 rounded-xl transition-all text-sm flex items-center justify-between">
+                            <span>C) Zadzwoń do mnie później.</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Result -->
+                <div class="quiz-step hidden text-center py-4" id="quiz-result">
+                    <div class="w-16 h-16 bg-amber-500/20 text-amber-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="trophy" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-2xl text-white mb-2" id="result-title">Brawo!</h3>
+                    <p class="text-slate-300 text-sm max-w-md mx-auto mb-6" id="result-text"></p>
+                    <a href="#kontakt" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3 rounded-xl transition-colors">
+                        <span>Zapisz się na bezpłatny test poziomujący</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Cost Calculator Section -->
+    <section id="cennik" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-amber-600 font-semibold text-sm tracking-wider uppercase">Kalkulator Inwestycji</span>
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl text-slate-900 mt-2">Oblicz szacowany koszt lekcji</h2>
+                <p class="text-slate-600 mt-2">Dostosuj częstotliwość i rodzaj zajęć do swoich możliwości budżetowych.</p>
+            </div>
+
+            <div class="bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm grid lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Controls Column -->
+                <div class="lg:col-span-7 space-y-6">
+                    <!-- Lesson Type -->
+                    <div>
+                        <label class="block text-slate-800 font-semibold text-sm mb-2">Rodzaj lekcji:</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button id="type-indiv" onclick="setCalcType('indiv')" class="calc-btn active bg-slate-900 text-white font-medium py-3 px-4 rounded-xl text-sm border border-slate-900 transition-all text-center">
+                                Indywidualne (1:1)
+                            </button>
+                            <button id="type-pair" onclick="setCalcType('pair')" class="calc-btn bg-white text-slate-700 hover:bg-slate-100 font-medium py-3 px-4 rounded-xl text-sm border border-slate-300 transition-all text-center">
+                                W parze (2 osoby)
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Frequency Slider -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-slate-800 font-semibold text-sm">Liczba lekcji w tygodniu:</label>
+                            <span id="freq-display" class="font-bold text-amber-600 text-base">1 lekcja / tydz.</span>
+                        </div>
+                        <input type="range" id="freq-range" min="1" max="4" value="1" step="1" oninput="updateCost()" class="w-full accent-amber-600 cursor-pointer">
+                    </div>
+
+                    <!-- Duration Option -->
+                    <div>
+                        <label class="block text-slate-800 font-semibold text-sm mb-2">Czas trwania spotkania:</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button id="dur-60" onclick="setCalcDur(60)" class="dur-btn active bg-slate-900 text-white font-medium py-2.5 px-4 rounded-xl text-sm border border-slate-900 transition-all text-center">
+                                60 minut
+                            </button>
+                            <button id="dur-90" onclick="setCalcDur(90)" class="dur-btn bg-white text-slate-700 hover:bg-slate-100 font-medium py-2.5 px-4 rounded-xl text-sm border border-slate-300 transition-all text-center">
+                                90 minut
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Result Card Column -->
+                <div class="lg:col-span-5 bg-slate-900 text-white rounded-2xl p-6 sm:p-8 flex flex-col justify-between h-full border border-slate-800">
+                    <div>
+                        <span class="text-amber-400 font-semibold text-xs uppercase tracking-wider">Szacowany koszt miesięczny</span>
+                        <div class="mt-4 mb-2 flex items-baseline gap-2">
+                            <span id="total-price" class="font-heading font-extrabold text-4xl text-amber-400">480 zł</span>
+                            <span class="text-slate-400 text-sm">/ miesiąc</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed mb-6">
+                            Obejmuje ~4 tygodnie nauki, dostęp do materiałów, fiszek online oraz bezpłatne odwoływanie lekcji z 24h wyprzedzeniem.
+                        </p>
+                    </div>
+
+                    <a href="#kontakt" class="block text-center bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold py-3.5 rounded-xl shadow-lg shadow-amber-500/20 transition-all text-sm">
+                        Zarezerwuj ten pakiet
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="opinie" class="py-20 bg-slate-50 border-t border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-600 font-semibold text-sm tracking-wider uppercase">Opinie Uczniów</span>
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl text-slate-900 mt-2">Co mówią o mnie kursanci?</h2>
+                <p class="text-slate-600 mt-2">Realne historie sukcesu i przełamania bariery językowej.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-6 italic">
+                            "Przed zajęciami z Anną panicznie bałam się mówić po niemiecku w nowej pracy w Monachium. Po 4 miesiącach lekcji bez problemu prowadzę spotkania i piszę maile. Gorąco polecam!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center text-sm">
+                            MK
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Marta K.</h4>
+                            <span class="text-xs text-slate-500">Project Manager (A2 ➔ B2)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-6 italic">
+                            "Zdałem egzamin Goethe-Zertifikat B2 na 92%! Przygotowanie było konkretne, nastawione na typowe haczyki egzaminacyjne. Materiały dodatkowe rewelacja."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-slate-900 text-white font-bold flex items-center justify-center text-sm">
+                            PW
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Piotr W.</h4>
+                            <span class="text-xs text-slate-500">Programista, zdany Goethe B2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-6 italic">
+                            "Atmsofera na lekcjach jest przemiła. Zawsze czeka nawiązana luźna rozmowa po niemiecku i mnóstwo humoru. Pierwszy raz nauka języka sprawia mi przyjemność!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-red-500 text-white font-bold flex items-center justify-center text-sm">
+                            KŻ
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Katarzyna Ż.</h4>
+                            <span class="text-xs text-slate-500">Niemiecki od podstaw (A1)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-amber-600 font-semibold text-sm tracking-wider uppercase">Pytania i Odpowiedzi</span>
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl text-slate-900 mt-2">Często zadawane pytania (FAQ)</h2>
+            </div>
+
+            <div class="space-y-4" id="faq-accordion">
+                <!-- FAQ Item 1 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full flex items-center justify-between p-5 text-left font-semibold text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span>Jak wyglądają lekcje online i co jest mi potrzebne?</span>
+                        <i id="faq-icon-1" data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-1" class="hidden px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+                        Lekcje odbywają się przez platformę Zoom lub MS Teams. Potrzebujesz jedynie komputera lub tabletu z mikrofonem i kamerą oraz stabilnego połączenia z Internetem. Wszystkie podręczniki, materiały i notatki dostajesz ode mnie w formie cyfrowej.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full flex items-center justify-between p-5 text-left font-semibold text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span>Na czym polega bezpłatna lekcja próbna?</span>
+                        <i id="faq-icon-2" data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-2" class="hidden px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+                        Darmowa lekcja próbna trwa około 20-25 minut. Poznacie się z lektorem, określimy Twój aktualny poziom oraz cele, omówimy preferowany grafik i przetestujemy połączenie wideo bez żadnych zobowiązań.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full flex items-center justify-between p-5 text-left font-semibold text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span>Czy mogę odwołać lub przesunąć lekcję?</span>
+                        <i id="faq-icon-3" data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-3" class="hidden px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+                        Tak! Rozumiem, że wypadki chodzą po ludziach. Odwołanie lub zmiana terminu zajęć jest bezpłatna, jeśli poinformujesz mnie minimum 24 godziny przed planowanym spotkaniem.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(4)" class="w-full flex items-center justify-between p-5 text-left font-semibold text-slate-900 hover:bg-slate-50 transition-colors">
+                        <span>Jakie są formy płatności za lekcje?</span>
+                        <i id="faq-icon-4" data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-4" class="hidden px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+                        Rozliczenie następuje zazwyczaj przelewem bankowym lub BLIK-iem z góry za cały miesiąc lub w pakietach po 5/10 lekcji. Wystawiam faktury (zwolnienie z VAT).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Free Trial Booking Section -->
+    <section id="kontakt" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info Left -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-amber-400 font-semibold text-sm tracking-wider uppercase">Kontakt</span>
+                    <h2 class="font-heading font-bold text-3xl sm:text-4xl">Zacznijmy naukę już dziś!</h2>
+                    <p class="text-slate-300 leading-relaxed">
+                        Wypełnij formularz, aby umówić się na bezpłatną, niezobowiązującą lekcję próbną. Odpowiadam zazwyczaj w ciągu kilku godzin.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-800 border border-slate-700 rounded-xl flex items-center justify-center text-amber-400">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 block">Telefon / WhatsApp</span>
+                                <a href="tel:+48123456789" class="font-semibold text-white hover:text-amber-400 transition-colors">+48 123 456 789</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-800 border border-slate-700 rounded-xl flex items-center justify-center text-amber-400">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 block">E-mail</span>
+                                <a href="mailto:kontakt@deutschmaster.pl" class="font-semibold text-white hover:text-amber-400 transition-colors">kontakt@deutschmaster.pl</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-800 border border-slate-700 rounded-xl flex items-center justify-center text-amber-400">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 block">Lokalizacja</span>
+                                <span class="font-semibold text-white">Poznań / Lekcje Online Cała Polska</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct WhatsApp Quick CTA -->
+                    <div class="pt-4">
+                        <a href="https://wa.me/48123456789" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-5 py-3 rounded-xl transition-colors text-sm">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            Napisz szybko na WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form Right -->
+                <div class="lg:col-span-7">
+                    <div class="bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-700 shadow-2xl">
+                        <h3 class="font-heading font-bold text-xl text-white mb-6">Formularz Zgłoszeniowy na Lekcję Próbną</h3>
+                        
+                        <form id="booking-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-medium text-slate-300 mb-1">Imię i Nazwisko *</label>
+                                    <input type="text" required placeholder="np. Jan Kowalski" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-slate-300 mb-1">Adres E-mail *</label>
+                                    <input type="email" required placeholder="jan@example.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-medium text-slate-300 mb-1">Numer Telefonu</label>
+                                    <input type="tel" placeholder="+48 000 000 000" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-slate-300 mb-1">Wybrany Kurs / Poziom</label>
+                                    <select id="selected-course-input" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500">
+                                        <option value="A1-A2 Podstawy">Niemiecki od Podstaw (A1-A2)</option>
+                                        <option value="B1-C1 Konwersacje">Konwersacje (B1-C1)</option>
+                                        <option value="Business German">Niemiecki w Biznesie</option>
+                                        <option value="Przygotowanie do Egzaminu">Przygotowanie do Egzaminu</option>
+                                        <option value="Jeszcze nie wiem">Nie wiem / Chcę przetestować</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Twój cel nauki / Dodatkowa wiadomość</label>
+                                <textarea rows="4" placeholder="Opisz krótko, dlaczego chcesz się uczyć (np. awans w pracy, wyjazd do Niemiec, egzamin)..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-amber-500/25 transition-all text-center flex items-center justify-center gap-2">
+                                <i data-lucide="send" class="w-5 h-5"></i>
+                                <span>Wyślij Zgłoszenie na Lekcję Próbną</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmation Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 max-w-md w-full text-center shadow-2xl relative">
+            <div class="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check-circle-2" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-heading font-bold text-2xl text-white mb-2">Vielen Dank!</h3>
+            <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                Dziękuję za zgłoszenie! Wiadomość została wysłana. Skontaktuję się z Tobą w ciągu maksymalnie 24h, aby ustalić dogodny termin lekcji próbnej.
+            </p>
+            <button onclick="closeModal()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3 rounded-xl transition-colors text-sm">
+                Zamknij okno
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800/80 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center font-bold text-slate-950">
+                    DE
+                </div>
+                <span class="font-heading font-semibold text-white">DeutschMaster • Anna Kowalska</span>
+            </div>
+
+            <p class="text-xs text-slate-500 text-center">
+                © <span id="year"></span> DeutschMaster. Wszystkie prawa zastrzeżone. Niemiecki z pasją.
+            </p>
+
+            <div class="flex space-x-4">
+                <a href="#" class="text-slate-400 hover:text-amber-400 transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                <a href="#" class="text-slate-400 hover:text-amber-400 transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                <a href="#" class="text-slate-400 hover:text-amber-400 transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactivity JavaScript Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Dynamic Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Auto Select Course in Form
+        function selectCourse(courseName) {
+            const selectEl = document.getElementById('selected-course-input');
+            for (let option of selectEl.options) {
+                if (option.text.includes(courseName) || option.value.includes(courseName)) {
+                    option.selected = true;
+                    break;
+                }
+            }
+        }
+
+        // Quiz Logic
+        let quizScore = 0;
+        function answerQuiz(step, points) {
+            quizScore += points;
+            document.getElementById(`step-${step}`).classList.add('hidden');
+
+            if (step < 3) {
+                document.getElementById(`step-${step + 1}`).classList.remove('hidden');
+            } else {
+                showQuizResult();
+            }
+        }
+
+        function showQuizResult() {
+            const resultBox = document.getElementById('quiz-result');
+            const titleEl = document.getElementById('result-title');
+            const textEl = document.getElementById('result-text');
+
+            resultBox.classList.remove('hidden');
+
+            if (quizScore === 3) {
+                titleEl.textContent = "Świetnie! Poziom B1 / B2";
+                textEl.textContent = "Masz już solidne podstawy języka niemieckiego! Z łatwością możemy skupić się na płynności konwersacji oraz słownictwie biznesowym.";
+            } else if (quizScore === 2) {
+                titleEl.textContent = "Dobry wynik! Poziom A2";
+                textEl.textContent = "Znasz kluczowe zwroty, ale czas poukładać gramatykę i rozwinąć skrzydła w codziennym mówieniu.";
+            } else {
+                titleEl.textContent = "Poziom A1 - Idealny czas na start!";
+                textEl.textContent = "Rozpoczęcie nauki od podstaw ze sprawdzonym lektorem da Ci najszybsze efekty i zbuduje właściwe nawyki.";
+            }
+        }
+
+        // Calculator Logic
+        let calcState = {
+            type: 'indiv',  // 'indiv' or 'pair'
+            freq: 1,        // lessons per week
+            duration: 60    // 60 or 90 min
+        };
+
+        function setCalcType(type) {
+            calcState.type = type;
+            document.getElementById('type-indiv').classList.toggle('active', type === 'indiv');
+            document.getElementById('type-indiv').classList.toggle('bg-slate-900', type === 'indiv');
+            document.getElementById('type-indiv').classList.toggle('text-white', type === 'indiv');
+            document.getElementById('type-indiv').classList.toggle('bg-white', type !== 'indiv');
+            document.getElementById('type-indiv').classList.toggle('text-slate-700', type !== 'indiv');
+
+            document.getElementById('type-pair').classList.toggle('active', type === 'pair');
+            document.getElementById('type-pair').classList.toggle('bg-slate-900', type === 'pair');
+            document.getElementById('type-pair').classList.toggle('text-white', type === 'pair');
+            document.getElementById('type-pair').classList.toggle('bg-white', type !== 'pair');
+            document.getElementById('type-pair').classList.toggle('text-slate-700', type !== 'pair');
+
+            updateCost();
+        }
+
+        function setCalcDur(dur) {
+            calcState.duration = dur;
+            document.getElementById('dur-60').classList.toggle('bg-slate-900', dur === 60);
+            document.getElementById('dur-60').classList.toggle('text-white', dur === 60);
+            document.getElementById('dur-60').classList.toggle('bg-white', dur !== 60);
+
+            document.getElementById('dur-90').classList.toggle('bg-slate-900', dur === 90);
+            document.getElementById('dur-90').classList.toggle('text-white', dur === 90);
+            document.getElementById('dur-90').classList.toggle('bg-white', dur !== 90);
+
+            updateCost();
+        }
+
+        function updateCost() {
+            const freqVal = parseInt(document.getElementById('freq-range').value);
+            calcState.freq = freqVal;
+            document.getElementById('freq-display').textContent = `${freqVal} ${freqVal === 1 ? 'lekcja' : 'lekcje'} / tydz.`;
+
+            // Base price per single lesson
+            let baseRate = calcState.type === 'indiv' ? 120 : 80;
+            if (calcState.duration === 90) baseRate *= 1.4;
+
+            // Monthly total (~4 weeks)
+            const monthlyCost = Math.round(baseRate * freqVal * 4);
+            document.getElementById('total-price').textContent = `${monthlyCost} zł`;
+        }
+
+        // FAQ Accordion Toggle
+        function toggleFaq(index) {
+            const ans = document.getElementById(`faq-ans-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+
+            const isHidden = ans.classList.contains('hidden');
+            
+            // Close all
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById(`faq-ans-${i}`)?.classList.add('hidden');
+                document.getElementById(`faq-icon-${i}`)?.classList.remove('rotate-180');
+            }
+
+            if (isHidden) {
+                ans.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Booking Form Modal Handling
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            document.getElementById('success-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+            document.getElementById('booking-form').reset();
+        }
+    </script>
+</body>
+</html>
